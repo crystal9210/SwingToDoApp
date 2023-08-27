@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml宣言、xmlバージョンとエンコーディングを指定-->
+
+<!--xmlns:XMLネームスペースを指定、ここではMavenのPOM(Project Object Model）のネームスペースを指定している-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>ToDoList</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- プロパティ（設定値）を指定するための要素、ここでは、ビルド時のコンパイラのバージョンやエンコーディングの設定をしている-->
+    <properties>
+        <!-- コンパイルするJavaソースのバージョンを指定(バージョン19) -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <!-- Mavenコンパイラプラグインによるターゲットバージョンの設定、生成されるバイトコードのバージョンをJava 19に指定 -->
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- 依存関係の管理 -->
+    <dependencies>
+        <!-- 追加するdependency -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.42.0.0</version>
+        </dependency>
+    </dependencies>
+
+
+</project>
